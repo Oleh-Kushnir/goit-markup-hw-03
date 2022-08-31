@@ -1,10 +1,3 @@
-/* колір основного тексту: color: #757575;
-колір 2-го тексту color: #212121 */
-
-/* білий #ffffff */
-/* акцент #2196F3; */
-/* основний фон #ffffff*/
-/* фон-2 #2F303A*/
 :root {
    /* Text colors */
     --primary-txt-cl: #757575;
@@ -28,17 +21,48 @@ body {
     line-height: 1.71;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.03em;
+
     color: var(--primary-txt-cl);
     background-color: var(--primary-white-cl);
 }
+
 .text {
     color: #757575;
+
     text-decoration: none;
     font-size: 16px;
     line-height: 1.88;
-        /* identical to box height, or 188% */
 }
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    outline: 1px solid tomato;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+/* ==========header========== */
 /* LOGO */
+
 .logo-link {
     color: var(--accent-txt-cl);
     font-family: Raleway, sans-serif;
@@ -57,32 +81,27 @@ body {
     color: var(--logo-footer);
 }
 
-footer {
-    background: var(--gray-bg-cl);
-}
-
-/* Section-1 */
-.hero {
-    background: var(--gray-bg-cl);
-}
-.hero-title {
-    color: var(--text-hero);
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    /* or 136% */
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-}
-
-
 .list {
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
-/* Навігація */
+
     /* Навiгація по сайтам */
+.main-nav {
+    display: flex;
+}
+
+.site-nav {
+    display: flex;
+}
+.site-nav .item:not(:last-child) {
+    margin-right: 50px;
+}
+
 .site-nav .link {
+    display: block;
+
     color: var(--title-txt-cl);
          
     font-weight: 500;
@@ -99,8 +118,16 @@ footer {
 .site-nav .link:focus {
     color: var(--accent-txt-cl);
 }
-    /* Контакти */
-.site-nav .contact {
+
+.site-nav-hc {
+    display: flex;
+}
+
+.site-nav-hc .item+.item {
+    margin-left: 50px;
+}
+
+.site-nav-hc .contact {
     color: var(--primary-txt-cl);
     font-weight: 500;
     font-size: 14px;
@@ -109,11 +136,32 @@ footer {
     text-decoration: none;
     font-style: normal;
 }
-
-.site-nav .contact:hover,
-.site-nav .contact:focus {
+.site-nav-hc .contact:hover,
+.site-nav-hc .contact:focus {
     color: var(--accent-txt-cl);
 }
+
+/* =========hero========== */
+
+.hero {
+    text-align: center;
+    background: var(--gray-bg-cl);
+}
+.hero-title {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: var(--text-hero);
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    /* or 136% */
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+
+
 
 /* Заголовки секцій */
 .section-title {
@@ -163,19 +211,14 @@ footer {
     font-family: inherit;
 }
 
-/* я не знаю чого кнопка не в центрі. поможіть(( */
-/* добавив margin i display: block)) */
 .hero-button {
+    display: inline-block;
     color: var(--text-bt-cl);
     background-color: var(--accent-bg-cl);
-    margin: 0 auto;
-    display: block;
     font-family: inherit; 
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
-    align-items: center;
-    text-align: center;
     letter-spacing: 0.06em;
     cursor: pointer;
 }
@@ -204,16 +247,8 @@ footer {
     font-family: inherit;
 } 
 
-.address {
-    color: var(--text-bt-cl);
 
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    text-decoration: none;
-    font-style: normal;
-}
-
+/* =======section2======== */
 .visually-hidden {
     position: absolute;
     white-space: nowrap;
@@ -226,18 +261,56 @@ footer {
     clip-path: inset(50%);
     margin: -1px;  
 }
+
+.text-mqs {
+    font-size: 14px;
+    line-height: 1.71;
+}
+
+/* ===========section-team============ */
 .section-team {
     background: var(--section-bg-4);
+}
+
+.text-ourteam {
+    font-size: 16px;
+    line-height: 1.18;
 }
 
 .worker {
     background: var(--primary-white-cl);
 }
 
+/* ===========footer========= */
+footer {
+    background: var(--gray-bg-cl);
+}
 
+.address {
+    color: var(--text-bt-cl);
 
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    font-style: normal;
+}
 
+    /* Контакти */
+.site-nav-fc .contact {
+    color: var(--primary-txt-cl);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    font-style: normal;
+}
 
+.site-nav-fc .contact:hover,
+.site-nav-fc .contact:focus {
+    color: var(--accent-txt-cl);
+}
 
 
 
