@@ -88,13 +88,19 @@ ul {
 }
 
     /* Навiгація по сайтам */
-.main-nav {
-    display: flex;
+.page-header .container {
+    display: flex;  
 }
-
 .site-nav {
     display: flex;
+    margin-left: 93px;
 }
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+
 .site-nav .item:not(:last-child) {
     margin-right: 50px;
 }
@@ -121,6 +127,8 @@ ul {
 
 .site-nav-hc {
     display: flex;
+    margin-left: auto;
+    align-items: center;
 }
 
 .site-nav-hc .item+.item {
@@ -314,3 +322,8 @@ footer {
 
 
 
+/* .container ====display flex
+.main-nav ====display: flex; align-items: center;
+.list-nav ====display flex
+.cont-nav ====display: flex; margin-left: auto;
+ */
