@@ -51,6 +51,8 @@ ul {
 .container {
     margin-left: auto;
     margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
     width: 1200px;
     outline: 1px solid tomato;
 }
@@ -153,6 +155,9 @@ ul {
 
 .hero {
     text-align: center;
+
+    padding-top: 200px;
+    padding-bottom: 200px;
     background: var(--gray-bg-cl);
 }
 .hero-title {
@@ -168,17 +173,64 @@ ul {
     text-transform: uppercase;
 }
 
-
-
-
-/* Заголовки секцій */
-.section-title {
-    color: var(--title-txt-cl);
+.hero-button {
+    display: inline-block;
+    padding: 10px 32px;
+    min-width: 216px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: 1px solid transparent;
     
+    color: var(--text-bt-cl);
+    background-color: var(--accent-bg-cl);
+
+    font-family: inherit; 
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
     text-align: center;
+
+    cursor: pointer;
+}
+
+.hero-button:focus,
+.hero-button:hover {
+    color: var(--text-bt-cl);
+    background-color: var(--active-bg-cl);
+    font-family: inherit;
+}
+
+
+/* ============section-2============== */
+
+.list-mqs {
+    display: flex;
+}
+
+.item-mqs {
+    width: 270px;
+}
+.item-mqs:not(:last-child) {
+    margin-right: 30px;
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;  
+}
+
+.text-mqs {
+    font-size: 14px;
+    line-height: 1.71;
 }
 
 .section-title-minor {
@@ -188,7 +240,27 @@ ul {
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
+
+    margin-bottom: 10px;
 }
+/* ===========section-3(work)================= */
+
+.section-work {
+    padding-top: 0;
+}
+
+
+
+.section-title {
+    color: var(--title-txt-cl);
+    
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+}
+
+
 
 .section-title-none {
     color: var(--title-txt-cl);
@@ -219,24 +291,6 @@ ul {
     font-family: inherit;
 }
 
-.hero-button {
-    display: inline-block;
-    color: var(--text-bt-cl);
-    background-color: var(--accent-bg-cl);
-    font-family: inherit; 
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-    cursor: pointer;
-}
-
-.hero-button:focus,
-.hero-button:hover {
-    color: var(--text-bt-cl);
-    background-color: var(--active-bg-cl);
-    font-family: inherit;
-}
 
 .button.radio {
     color: var(--title-txt-cl);
@@ -255,25 +309,6 @@ ul {
     font-family: inherit;
 } 
 
-
-/* =======section2======== */
-.visually-hidden {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;  
-}
-
-.text-mqs {
-    font-size: 14px;
-    line-height: 1.71;
-}
 
 /* ===========section-team============ */
 .section-team {
