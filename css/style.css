@@ -12,8 +12,11 @@
     --gray-bg-cl: #2F303A;
     --section-bg-4: #F5F4FA;
     /* Colors for button */
+    --btn-radio-bg: #F5F4FA;
     --text-bt-cl: #ffffff;
     --active-bg-cl: #188CE8;
+    /* border-bottom */
+    --border-bottom-header: #ECECEC;
 }
     
 body {
@@ -33,8 +36,6 @@ body {
     font-size: 16px;
     line-height: 1.88;
 }
-
-
 
 h1,
 h2,
@@ -61,7 +62,7 @@ ul {
     padding-bottom: 94px;
 }
 
-/* ==========header========== */
+/* ========== header ========== */
 /* LOGO */
 
 .logo-link {
@@ -88,14 +89,22 @@ ul {
     list-style: none;
 }
 
-    /* Навiгація по сайтам */
+.page-header {
+    padding-top: 25px;
+    padding-bottom: 24px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid var(--border-bottom-header);
+}
+
 .page-header .container {
     display: flex;  
 }
+/* ----навігація---- */
 .site-nav {
     display: flex;
     margin-left: 93px;
 }
+
 .main-nav {
     display: flex;
     align-items: center;
@@ -150,7 +159,7 @@ ul {
     color: var(--accent-txt-cl);
 }
 
-/* =========hero========== */
+/* ========= hero ========== */
 
 .hero {
     text-align: center;
@@ -201,7 +210,7 @@ ul {
 }
 
 
-/* ============section-2============== */
+/* ============ section-2 ============== */
 
 .list-mqs {
     display: flex;
@@ -242,7 +251,7 @@ ul {
 
     margin-bottom: 10px;
 }
-/* ===========section-3(work)================= */
+/* =========== section-3(work) ================= */
 
 .section-work {
     padding-top: 0;
@@ -318,7 +327,7 @@ ul {
 } 
 
 
-/* ===========section-team============ */
+/* =========== section-team ============ */
 .section-team {
     background: var(--section-bg-4);
 }
@@ -346,6 +355,74 @@ ul {
 .description-ourteam {
     margin: 30px 0;
 }
+
+/* ================== Portfolio ======================  */
+/* ================ filter portfolio ================= */
+
+.menu-btn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.item-btn:not(:last-child) {
+    margin-right: 8px;
+}
+
+.button.radio {
+    display: inline-block;
+    padding: 6px 22px;
+    min-width: 73px;
+
+    color: var(--title-txt-cl);
+    background-color: var(--btn-radio-bg);
+    
+    border-radius: 4px;
+    border: 1px solid transparent;
+
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+
+    cursor: pointer;
+}
+
+.button.radio:focus,
+.button.radio:hover {
+    color: var(--text-bt-cl);
+    background-color: var(--accent-bg-cl);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    font-family: inherit;
+}
+
+/* =============== Cписок ============= */
+
+.list-prj {
+    display: flex;
+    flex-wrap: wrap;
+}
+.item-prj {
+    width: calc((100% - 60px) / 3); 
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.item-prj:nth-child(3n) {
+    margin-right: 0;
+}
+.item-prj:nth-last-child(-n+3) {
+    margin-bottom: 0;
+}
+
+.card-prj {
+    padding: 20px 24px;
+}
+
+.list-title {
+    margin-bottom: 4px;
+}
+
 
 /* ===========footer========= */
 
@@ -382,9 +459,3 @@ footer {
 }
 
 
-
-/* .container ====display flex
-.main-nav ====display: flex; align-items: center;
-.list-nav ====display flex
-.cont-nav ====display: flex; margin-left: auto;
- */
