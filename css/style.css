@@ -17,6 +17,7 @@
     --active-bg-cl: #188CE8;
     /* border-bottom */
     --border-bottom-header: #ECECEC;
+    --border-div: #EEEEEE;
 }
     
 body {
@@ -62,6 +63,10 @@ ul {
     padding-bottom: 94px;
 }
 
+img {
+    display: block;
+}
+
 /* ========== header ========== */
 /* LOGO */
 
@@ -90,9 +95,6 @@ ul {
 }
 
 .page-header {
-    padding-top: 25px;
-    padding-bottom: 24px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-bottom: 1px solid var(--border-bottom-header);
 }
 
@@ -117,6 +119,8 @@ ul {
 
 .site-nav .link {
     display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
     color: var(--title-txt-cl);
          
@@ -146,7 +150,10 @@ ul {
 }
 
 .site-nav-hc .contact {
+    padding-top: 32px;
+    padding-bottom: 32px;
     color: var(--primary-txt-cl);
+
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -157,6 +164,10 @@ ul {
 .site-nav-hc .contact:hover,
 .site-nav-hc .contact:focus {
     color: var(--accent-txt-cl);
+}
+
+.link.current {
+    color: var(--accent-txt-cl)
 }
 
 /* ========= hero ========== */
@@ -179,6 +190,9 @@ ul {
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    width: 700px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .hero-button {
@@ -277,14 +291,14 @@ ul {
     margin-right: 30px;
 }
 
-
-
 .section-title-none {
     color: var(--title-txt-cl);
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
-    /* identical to box height */
+    
+    margin-bottom: 10px;
 }
 .list-title {
     color: var(--title-txt-cl);
@@ -353,8 +367,9 @@ ul {
 }
 
 .description-ourteam {
-    margin: 30px 0;
+    padding: 30px;
 }
+
 
 /* ================== Portfolio ======================  */
 /* ================ filter portfolio ================= */
@@ -401,19 +416,16 @@ ul {
 .list-prj {
     display: flex;
     flex-wrap: wrap;
+    margin-right: -30px;
+    margin-bottom: -30px;
 }
 .item-prj {
-    width: calc((100% - 60px) / 3); 
+    width: calc(100% / 3 - 30px); 
     margin-right: 30px;
     margin-bottom: 30px;
 }
 
-.item-prj:nth-child(3n) {
-    margin-right: 0;
-}
-.item-prj:nth-last-child(-n+3) {
-    margin-bottom: 0;
-}
+
 
 .card-prj {
     padding: 20px 24px;
@@ -421,6 +433,12 @@ ul {
 
 .list-title {
     margin-bottom: 4px;
+}
+
+.item-prj div {
+    border-left: 1px solid var(--border-div);
+    border-bottom: 1px solid var(--border-div);
+    border-right: 1px solid var(--border-div);
 }
 
 
@@ -431,6 +449,14 @@ footer {
     padding-top: 60px;
     padding-bottom: 60px;
 }
+
+.site-nav-fc {
+    margin-top: 20px;
+}
+
+.site-nav-fc li:not(:last-child) {
+    margin-bottom: 9px;
+}  
 
 .address {
     color: var(--text-bt-cl);
