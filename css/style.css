@@ -150,6 +150,7 @@ img {
 }
 
 .site-nav-hc .contact {
+    display: block;
     padding-top: 32px;
     padding-bottom: 32px;
     color: var(--primary-txt-cl);
@@ -450,7 +451,7 @@ footer {
     padding-bottom: 60px;
 }
 
-.site-nav-fc {
+address {
     margin-top: 20px;
 }
 
